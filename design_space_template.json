@@ -1,0 +1,23 @@
+{
+  "recon_families": [
+    "CIAS-Core",
+    "CIAS-Core-ELP",
+    "Baseline-CNN"
+  ],
+  "uq_schemes": [
+    "Conformal",
+    "Ensemble",
+    "None"
+  ],
+  "compression_ratios": [
+    8,
+    16,
+    32
+  ],
+  "num_layers": [
+    6,
+    8,
+    10,
+    12
+  ]
+}

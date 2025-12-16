@@ -1,0 +1,38 @@
+[
+  {
+    "forward_config": {
+      "compression_ratio": 8,
+      "mask_type": "random"
+    },
+    "recon_family": "CIAS-Core",
+    "recon_params": {
+      "num_layers": 8,
+      "hidden_dim": 64
+    },
+    "uq_scheme": "None",
+    "uq_params": {},
+    "train_config": {
+      "epochs": 30,
+      "lr": 0.001,
+      "batch_size": 16
+    }
+  },
+  {
+    "forward_config": {
+      "compression_ratio": 16,
+      "mask_type": "optimized"
+    },
+    "recon_family": "Baseline-CNN",
+    "recon_params": {
+      "num_layers": 6,
+      "hidden_dim": 32
+    },
+    "uq_scheme": "None",
+    "uq_params": {},
+    "train_config": {
+      "epochs": 30,
+      "lr": 0.001,
+      "batch_size": 16
+    }
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "recon_family": "CIAS-Core-ELP",
+    "uq_scheme": "Conformal",
+    "recon_params": {
+      "num_layers": 10,
+      "hidden_dim": 128
+    },
+    "forward_config": {
+      "compression_ratio": 8
+    },
+    "uq_params": {
+      "alpha": 0.1
+    },
+    "train_config": {
+      "epochs": 50,
+      "lr": 0.001
+    }
+  },
+  {
+    "recon_family": "CIAS-Core",
+    "uq_scheme": "Ensemble",
+    "recon_params": {
+      "num_layers": 8,
+      "hidden_dim": 64
+    },
+    "forward_config": {
+      "compression_ratio": 16
+    },
+    "uq_params": {
+      "n_models": 5
+    },
+    "train_config": {
+      "epochs": 40,
+      "lr": 0.0005
+    }
+  },
+  {
+    "recon_family": "Baseline-CNN",
+    "uq_scheme": "None",
+    "recon_params": {
+      "num_layers": 6
+    },
+    "forward_config": {
+      "compression_ratio": 8
+    },
+    "uq_params": {},
+    "train_config": {
+      "epochs": 30,
+      "lr": 0.001
+    }
+  }
+]
