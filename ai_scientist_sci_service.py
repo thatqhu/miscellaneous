@@ -19,6 +19,11 @@ class ForwardConfig(BaseModel):
 class TrainRequest(BaseModel):
     job_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     forward_config: ForwardConfig
+    recon_family: str
+    uq_scheme: str
+    recon_params: Dict[str, Any]
+    uq_params: Dict[str, Any]
+    train_config: Dict[str, Any]
 
 
 class TrainResponse(BaseModel):
@@ -39,6 +44,7 @@ class MetricsResult(BaseModel):
 class EvaluateResponse(BaseModel):
     job_id: str
     status: str
+    train_log: str
     metrics: Optional[MetricsResult] = None
     detailed_results: Optional[Dict[str, Any]] = None
     evaluation_time: Optional[float] = None
